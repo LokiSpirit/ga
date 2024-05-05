@@ -1,0 +1,23 @@
+name: Deploy React App
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.github/workflows/*'
+jobs:
+  deploy:
+    runs-on: window-latest
+    steps:
+      - name: Get the repository code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm ci
+      - name: Test application
+        run: npm run test
+      - name: Lint application
+        run: npm run lint
+      - name: Build application
+        run: npm run build
+      - name: Deploy
+        run: echo Deploying
