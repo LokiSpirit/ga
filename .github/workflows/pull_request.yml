@@ -5,7 +5,7 @@ on:
         types: [opened, edited, reopened]
 jobs:
   print:
-    runs-on: window-latest
+    runs-on: windows-latest
     steps:
       - name: Print context
         run: echo "${{ toJSON(github.event) }}"

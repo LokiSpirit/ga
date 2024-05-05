@@ -7,7 +7,7 @@ on:
       - '.github/workflows/*'
 jobs:
   deploy:
-    runs-on: window-latest
+    runs-on: windows-latest
     steps:
       - name: Get the repository code
         uses: actions/checkout@v3
